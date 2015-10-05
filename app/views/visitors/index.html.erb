@@ -2,4 +2,7 @@
 <p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
 
 
+<% if current_user.admin? %>
+<p><%= link_to 'Project Listings Index', projects_path %> </p>
 
+<% end %>
