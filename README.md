@@ -1,5 +1,5 @@
 
-enum and model names
-students = users
-organizations = vip
-riipen staff = admin
+enum and model names<hr>
+students = users<hr>
+organizations = vip<hr>
+riipen staff = admin<hr>
