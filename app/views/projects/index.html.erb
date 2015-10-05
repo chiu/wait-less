@@ -1,11 +1,32 @@
-<h1>Projects#index</h1>
+<h4>Projects#index</h4>
 <p>Find me in app/views/projects/index.html.erb</p>
 
-<h1>Synergy</h1>
-<%= link_to "Submit a project!", new_project_path %>
+<h1>Project Student Matcher</h1>
+<% if current_user != nil %>
+You have a user id of <%= current_user.id %>
+    with email: <%= current_user.email %>
+    Your role is: <%= current_user.role %>
+<% end %>
+
+<% if current_user != nil %>
+<% if current_user.vip? %>
+<h1><%= link_to "Submit a project!", new_project_path %></h1>
+<% end %>
+<% end %>
+
+
+
 <hr>
 <% @projects.each do |project| %>
 <h2><%= link_to project.title, project_path(project) %></h2>
-<p><%= project.description %></p>
-<hr>
+<div>
+Description:
+<%= project.description %></div>
+
+<% if project.user_id != nil %>
+<div> author user id: <%= project.user_id %></div>
+<div> author user id: <%= User.find(project.user_id).email %>
+</div>
 <% end %>
+<% end %>
+<hr>

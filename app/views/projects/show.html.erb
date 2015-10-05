@@ -4,13 +4,28 @@
 <%= link_to "Back to all projects", projects_path %><br/>
 
 
-<h2><%= @project.title %> (<%= link_to "edit", edit_project_path(@project) %>, <%= link_to "delete", project_path(@project), method: :delete, confirm: "You sure?" %>)</h2>
 
-<div>description: <%= @project.description %></div>
-<div>time_estimate: <%= @project.time_estimate %></div>
-<div>time_start: <%= @project.time_start %></div>
-<div>time_end: <%= @project.time_end %></div>
-<div>reward_monetary: <%= @project.reward_monetary %></div>
-<div>reward_non_monetary: <%= @project.reward_non_monetary %></div>
+<h2><%= @project.title %> </h2>
+
+Only vip (organizations) may edit projects. <hr>
+
+<% if current_user != nil %>
+    <% if current_user.vip? %>
+   
+        <% if current_user.id = @project.user_id %>
+        <h2>(<%= link_to "edit", edit_project_path(@project) %>, <%= link_to "delete", project_path(@project), method: :delete, confirm: "You sure?" %>)</h2>
+        <% else %>
+        However this is not your project. Only project creator may edit project.
+        <% end %>
+    <% end %>
+<% end %>
+<hr>
+
+    <div>description: <%= @project.description %></div>
+    <div>time_estimate: <%= @project.time_estimate %></div>
+    <div>time_start: <%= @project.time_start %></div>
+    <div>time_end: <%= @project.time_end %></div>
+    <div>reward_monetary: <%= @project.reward_monetary %></div>
+    <div>reward_non_monetary: <%= @project.reward_non_monetary %></div>
 
 
