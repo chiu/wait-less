@@ -15,7 +15,8 @@ group :development do
 end
 gem 'bootstrap-sass'
 gem 'devise'
-gem 'pg'
+# gem 'pg'
+gem 'sqlite3'
 gem 'pundit'
 gem 'therubyracer', :platform=>:ruby
 group :development do
