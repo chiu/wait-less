@@ -1,0 +1,54 @@
+<div>Find me at _form.html.erb</div>
+<div></div>
+
+<%= form_for @project do |f| %>
+    <% if @project.errors.any? %>
+        <div>
+          <%= pluralize(@project.errors.count, "error") %> prevented this project from being submitted:
+          <ul>
+            <% @project.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+<div>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+</div>
+
+<div>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+</div>
+
+<div>
+    <%= f.label :time_estimate %><br>
+    <%= f.number_field :time_estimate %>
+</div>
+
+<div>
+    <%= f.label :time_start %><br>
+    <%= f.date_field :time_start %>
+</div>
+<div>
+    <%= f.label :time_end %><br>
+    <%= f.date_field :time_end %>
+</div>
+
+<div>
+    <%= f.label :reward_monetary %><br>
+    <%= f.number_field :reward_monetary %>
+</div>
+
+<div>
+    <%= f.label :reward_non_monetary %><br>
+    <%= f.text_area :reward_non_monetary %>
+</div>
+
+<div>
+    <%= f.submit "Submit" %> 
+</div>
+<% end %>

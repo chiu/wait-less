@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  title: MyString
+  description: MyText
+  time_estimate: 1
+  time_start: 2015-10-05 08:08:02
+  time_end: 2015-10-05 08:08:02
+  reward_monetary: 1
+  reward_non_monetary: MyText
+
+two:
+  user_id: 
+  title: MyString
+  description: MyText
+  time_estimate: 1
+  time_start: 2015-10-05 08:08:02
+  time_end: 2015-10-05 08:08:02
+  reward_monetary: 1
+  reward_non_monetary: MyText

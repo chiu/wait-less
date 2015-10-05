@@ -6,12 +6,18 @@
 
 
 class ApplicationController < ActionController::Base
-  before_action :configure_permitted_parameters, if: :devise_controller?
+    before_action :configure_permitted_parameters, if: :devise_controller?
 
-  protected
+    protected
 
-  def configure_permitted_parameters
+    def configure_permitted_parameters
     # devise_parameter_sanitizer.for(:sign_up) << :role
-     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit({ roles: [] }, :email, :password, :password_confirmation) }
-  end
+        devise_parameter_sanitizer.for(:sign_up) { |u| u.permit({ roles: [] }, :email, :password, :password_confirmation) }
+    end
+
+    # def current_user
+    #     @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    # end
+
+    # helper_method :current_user
 end
