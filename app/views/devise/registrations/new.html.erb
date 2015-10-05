@@ -14,6 +14,11 @@
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
+    <div class="form-group">
+    type in 0 for student(user); 1 for organizations (vip); and 2 for admin (riipen staff)
+      <%= f.label :role %>
+      <%= f.number_field :role, class: 'form-control' %>
+    </div>
      <%= f.submit 'Sign up', :class => 'button right' %>
   <% end %>
 </div>
