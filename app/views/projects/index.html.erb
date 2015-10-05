@@ -2,6 +2,10 @@
 <p>Find me in app/views/projects/index.html.erb</p>
 
 <h1>Project Student Matcher</h1>
+<% if current_user != nil %>
+You have a user id of <%= current_user.id %>
+    with email: <%= current_user.email %>
+<% end %>
 
 <% if current_user != nil %>
 <% if current_user.vip? %>
