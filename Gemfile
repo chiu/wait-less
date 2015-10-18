@@ -10,6 +10,9 @@ gem 'pg'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'twilio-ruby' 
 
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
+
 group :development, :test do
   gem 'byebug'
 end
