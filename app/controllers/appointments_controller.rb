@@ -13,23 +13,10 @@ class AppointmentsController < ApplicationController
     render json: @appointments
   end
 
-  def create_user_api
-    # t.string   "email",                  default: "", null: false
-    # t.string   "encrypted_password",     default: "", null: false
-    # t.string   "reset_password_token"
-    # t.datetime "reset_password_sent_at"
-    # t.datetime "remember_created_at"
-    # t.integer  "sign_in_count",          default: 0,  null: false
-    # t.datetime "current_sign_in_at"
-    # t.datetime "last_sign_in_at"
-    # t.string   "current_sign_in_ip"
-    # t.string   "last_sign_in_ip"
-    # t.datetime "created_at",                          null: false
-    # t.datetime "updated_at",                          null: false
-    # t.string   "name"
-    # t.integer  "role"
+  def handle_cor
 
-    u = User.create({:email => "guy@gmail.com", :password => "11111111", :password_confirmation => "11111111", role: 1 })
+    # u = User.create({:email => "guy@gmail.com", :password => "11111111", :password_confirmation => "11111111", role: 1 })
+    # name, email, password, phone_number, clinic_id
 
 
 
@@ -74,7 +61,7 @@ class AppointmentsController < ApplicationController
   protected
 
   def appointment_params
-    params.require(:appointment).permit(:user_id, :finished)
+    params.require(:appointment).permit(:user_id, :finished, :name, :email, :password, :password_confirmation, :phone_number)
   end
 
 end

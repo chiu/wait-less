@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   # get 'api/appointments/'
    # get '/api/diners', :to => 'diners#display_api'
   get '/api/appointments', :to => 'appointments#display_api'
+  post '/api/appointments/cor', :to => 'appointments#handle_cor'
+
 
   root to: 'visitors#index'
   devise_for :users, :controllers => { registrations: 'registrations' }
