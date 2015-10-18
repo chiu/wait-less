@@ -10,6 +10,12 @@ class AppointmentsController < ApplicationController
         @appointment = Appointment.find(params[:id])
     end
 
+    def display_api
+    @appointments = Appointment.all
+    # @messages = current_user.messages
+    render json: @appointments
+  end
+
     def new
         @appointment = Appointment.new
     end

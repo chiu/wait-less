@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   # get 'projects/edit'
 
-
+  # get 'api/appointments/'
+   # get '/api/diners', :to => 'diners#display_api'
+  get '/api/appointments', :to => 'appointments#display_api'
 
   root to: 'visitors#index'
   devise_for :users, :controllers => { registrations: 'registrations' }
