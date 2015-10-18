@@ -27,6 +27,7 @@
 .sass-cache
 /config/config.yml
 /config/database.yml
+/config/app_environment_variables.rb
 
 /coverage.data
 /coverage/
