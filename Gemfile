@@ -10,19 +10,17 @@ gem 'pg'
 
 group :development, :test do
   gem 'byebug'
-  gem 'pry'
-  gem 'pry-rails'
-  gem 'pry-nav'
 end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'pundit'
-
 gem 'therubyracer', :platform=>:ruby
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -31,5 +29,5 @@ group :development do
 end
 group :production do
   gem 'rails_12factor'
-  # gem 'unicorn'
+  gem 'puma', '2.11.1'
 end
