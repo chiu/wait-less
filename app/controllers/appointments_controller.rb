@@ -15,11 +15,15 @@ class AppointmentsController < ApplicationController
 
   def handle_cor
 
+    # u = User.create({:email => appointment_params[:email], :password => appointment_params[:email], :password_confirmation => appointment_params[:email], role: appointment_params[:email] })
+
     # u = User.create({:email => "guy@gmail.com", :password => "11111111", :password_confirmation => "11111111", role: 1 })
     # name, email, password, phone_number, clinic_id
 
+    # a=Appointment.create()
 
-
+    result = "super success"
+    render json: result
   end
 
   def new
