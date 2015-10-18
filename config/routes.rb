@@ -19,6 +19,7 @@ Rails.application.routes.draw do
    # get '/api/diners', :to => 'diners#display_api'
   get '/api/appointments', :to => 'appointments#display_api'
   post '/api/appointments/cor', :to => 'appointments#handle_cor'
+  get "/api/appointments/num/:clinic_id", :to => "appointments#get_num"
 
 
   root to: 'visitors#index'
