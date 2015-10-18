@@ -1,4 +1,4 @@
-##Made for the Internship Challenge
+##Made for the Procurify Hackathon
 
 Legend <hr>
 enum and model names<hr>
