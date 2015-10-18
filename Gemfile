@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'twilio-ruby' 
 
 group :development, :test do
   gem 'byebug'
