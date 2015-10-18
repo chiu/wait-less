@@ -10,6 +10,9 @@ gem 'pg'
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-nav'
 end
 group :development do
   gem 'web-console', '~> 2.0'
@@ -17,8 +20,6 @@ group :development do
 end
 gem 'bootstrap-sass'
 gem 'devise'
-# gem 'pg'
-gem 'sqlite3'
 gem 'pundit'
 
 gem 'therubyracer', :platform=>:ruby
