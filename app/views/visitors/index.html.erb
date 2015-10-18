@@ -4,10 +4,18 @@
 
 
 
-<p><%= link_to 'Project Listings Index', projects_path %> </p>
+<!-- <p><%= link_to 'Project Listings Index', projects_path %> </p> -->
+
+
+<p><%= link_to 'Create Appointment', new_appointment_path %> </p>
+
+
 <% if current_user != nil %>
 
-    <% if current_user.admin? %>
+    <% if current_user.patient? %>
+    I am patient. 
+
+    <% elsif current_user.admin? %>
     I am admin. 
    
     <% elsif current_user.vip? %>

@@ -1,10 +1,15 @@
-##Made for the Internship Challenge
+##Made for the Procurify Hackathon
+
+JSON API:
+http://0.0.0.0:3000/api/appointments
 
 Legend <hr>
 enum and model names<hr>
 students = users<hr>
 organizations = vip<hr>
-riipen staff = admin<hr>
+our staff = admin<hr>
+patients
+clinics
 
 
 
