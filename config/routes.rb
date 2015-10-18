@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'appointments/index'
+  # get 'appointments/index'
 
-  get 'appointments/show'
+  # get 'appointments/show'
 
-  get 'appointments/new'
+  # get 'appointments/new'
 
-  get 'appointments/edit'
+  # get 'appointments/edit'
 
   # get 'projects/index'
 
@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   resources :users
 
   resources :projects
+
+  resources :appointments
 end

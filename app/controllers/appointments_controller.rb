@@ -24,7 +24,7 @@ class AppointmentsController < ApplicationController
         @appointment.user_id = current_user.id
 
         if @appointment.save
-            redirect_to appointments_path, notice: "#{@appointment.title} was submitted successfully!"
+            redirect_to appointments_path, notice: "#{@appointment.user_id} was submitted successfully!"
         else
             render :new
         end
