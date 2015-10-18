@@ -8,6 +8,9 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
+
 group :development, :test do
   gem 'byebug'
   gem 'pry'
