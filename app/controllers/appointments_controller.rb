@@ -16,7 +16,7 @@ class AppointmentsController < ApplicationController
   def handle_cor
     u = User.find_by_email(appointment_params[:email]) || User.create({:email => appointment_params[:email], :password => appointment_params[:email], :password_confirmation => appointment_params[:email], role: 3 })
     clinic_id = appointment_params[:clinic_id]
-    if Appointment.where(user_id: u.id, clinic_id: clinic_id).empty? 
+    if Appointment.where(user_id: u.id, clinic_id: clinic_id).where("created_at BETWEEN ? AND ?", Time.zone.now.beginning_of_day, Time.zone.now.end_of_day).empty? 
       a=Appointment.create(clinic_id: clinic_id, user_id: u.id)
     end
 
