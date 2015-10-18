@@ -1,0 +1,28 @@
+<!-- _form.html.erb -->
+
+
+<div>Find me at _form.html.erb</div>
+<div></div>
+
+<%= form_for @appointment do |f| %>
+    <% if @appointment.errors.any? %>
+        <div>
+          <%= pluralize(@appointment.errors.count, "error") %> prevented this appointment from being submitted:
+          <ul>
+            <% @appointment.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+<div>
+    <%= f.label :finished %><br>
+    <%= f.boolean :finished %>
+</div>
+
+<div>
+    <%= f.submit "Submit" %> 
+</div>
+<% end %>
